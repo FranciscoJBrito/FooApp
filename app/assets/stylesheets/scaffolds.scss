@@ -1,27 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:wght@400;500;600;700;800&display=swap');
+
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px; }
-
+  font-family: 'Wix Madefor Text', sans-serif;
+}
 body, p, ol, ul, td {
-  font-family: 'Helvetica', sans-serif;
   font-size: 16px;
-  line-height: 18px; }
+  line-height: 18px; 
+}
+
+.application_container {
+  padding: 30px;
+}
 
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px; }
-
-a {
-  color: #000; }
-
-a:visited {
-  color: #666; }
-
-a:hover {
-  color: #fff;
-  background-color: #000; }
 
 th {
   padding-bottom: 5px; }
@@ -58,6 +54,33 @@ td {
   font-size: 12px;
   list-style: square; }
 
+// Headers
+h1 {
+  color: var(--green-600);
+  margin: 30px 0px;
+  font-size: xx-large;
+}
+
+h2 {
+  margin: 10px 0px;
+  font-size: x-large;
+} 
+h3 {
+  margin: 10px 0px;
+  font-size: larger;
+}
+// End Headers
+
+  // Containers styling
+.main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+// End containers styling
+
 //Form styling
 .form_section {
   display: flex;
@@ -72,10 +95,15 @@ td {
     width: 400px;
     padding: 15px;
 
-    .field,
+    .field {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
     .actions {
       margin-bottom: 10px;
       width: 100%;
+      color: #c00;
     }
 
     input {
@@ -86,6 +114,48 @@ td {
     }
   }
 }
+// End form styling
+// Buttons
+.btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn { 
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  &.green {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.2);
+    border: 1px solid green;
+
+    &:hover {
+      background-color: green;
+      color: white;
+    }
+  }
+
+  &.red {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 1px solid red;
+
+    &:hover {
+      color: white;
+      background-color: red;
+    }
+  }
+
+  &.submit {
+    margin-top: 10px;
+    background: var(--green-500);
+    color: white
+  }
+}
+// End buttons
 
 label {
   display: block;

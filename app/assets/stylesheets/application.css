@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+     padding: 0px;
+     margin: 0px;
+}
+
+ :root {
+      --green-600: #0a3c2d;
+      --green-500: #179e76;
+      --green-400: #39c198;
+      --green-300: #80baa8;
+      --green-200: #a2e0cd;
+      --green-100: #e6f7f3;
+ }

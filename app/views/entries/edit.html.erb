@@ -1,6 +1,11 @@
-<h1>Editing Entry</h1>
+<div class='main_container'>
+      <h1>Editar registro</h1>
 
-<%= render 'form', entry: @entry %>
-
-<%= link_to 'Show', @entry %> |
-<%= link_to 'Back', entries_path %>
+      <%= render 'form', entry: @entry %>
+      <br>
+      <br>
+      <div class="btn_container">
+            <%= link_to 'Ver registro', @entry, class: "btn green"%> 
+            <%= link_to 'Cancelar', entries_path, class: "btn red" %>
+      </div>
+</div>
