@@ -4,13 +4,12 @@
 
 // Registros Styling
 .records_container {
-      width: 100%;
-      display: flex;
-      justify-content: start;
-      align-items: center;
+      display: grid;
+      justify-content: center;
+      gap: 10px;
 
       .card_container {
-            width: 200px;
+            width: 220px;
             margin: 10px 15px;
             padding: 15px 20px;
             border: 1px solid var(--green-600);
@@ -30,10 +29,30 @@
 
             .card_actions {
                   display: flex;
-                  margin-top: 20px;
+                  margin-top: 30px;
                   justify-content: space-between;
                   align-items: center;
             }
+      }
+
+      @media (min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: 900px) {
+            grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (min-width: 1200px) {
+            grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (min-width: 1600px) {
+            grid-template-columns: repeat(5, 1fr);
+      }
+
+      @media (min-width: 1800px) {
+            grid-template-columns: repeat(6, 1fr);
       }
 }
 

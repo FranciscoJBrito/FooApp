@@ -23,14 +23,10 @@
         </div>
 
         <div class="card_actions">
-          <p><%= link_to 'Ver', entry %></p>
-          <p><%= link_to 'Editar', edit_entry_path(entry) %></p>
-          <p><%= link_to 'Eliminar', entry, method: :delete, data: { confirm: 'Estas seguro?' } %></p>
+          <%= link_to 'Ver', entry, class: "btn gray" %>
+          <%= link_to 'Editar', edit_entry_path(entry), class: "btn gray" %>
+          <%= link_to 'Eliminar', entry, method: :delete, data: { confirm: 'Estas seguro?' }, class: "btn gray" %>
         </div>
       </div>
     <% end %>
   </div>
-
-<br>
-
-<%= link_to 'Nuevo registro', new_entry_path %>

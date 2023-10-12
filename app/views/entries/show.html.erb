@@ -1,29 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="main_container">
+  <h1><%= @entry.meal_type %></h1>
 
-<p>
-  <strong>Meal type:</strong>
-  <%= @entry.meal_type %>
-</p>
+  <div class="show_container">
+    
+    <div class="tag_container">
+      <div class="tag top">
+        <p>Calorias</p>
+        <strong><%= @entry.calories %> kcal</strong>
+      </div>
+      <div class="tag bottom">
+        <span class="percentage"><%= @entry.calories * 100 / 2000%>%</span>
+      </div>
+    </div>
 
-<p>
-  <strong>Calories:</strong>
-  <%= @entry.calories %>
-</p>
+    <div class="tag_container">
+      <div class="tag top">
+        <p>Carbos</p>
+        <strong><%= @entry.carbohydrates %> g</strong>
+      </div>
+      <div class="tag bottom">
+        <span class="percentage"><%= @entry.carbohydrates * 100 / 1100%>%</span>
+      </div>
+    </div>
 
-<p>
-  <strong>Proteins:</strong>
-  <%= @entry.proteins %>
-</p>
+    <div class="tag_container">
+      <div class="tag top">
+        <p>Proteinas</p>
+        <strong><%= @entry.proteins %> g</strong>
+      </div>
+      <div class="tag bottom">
+        <span class="percentage">16%</span>
+      </div>
+    </div>
 
-<p>
-  <strong>Carbohydrates:</strong>
-  <%= @entry.carbohydrates %>
-</p>
+    <div class="tag_container">
+      <div class="tag top">
+        <p>Grasas</p>
+        <strong><%= @entry.fats %> g</strong>
+      </div>
+      <div class="tag bottom">
+        <span class="percentage">16%</span>
+      </div>
+    </div>
 
-<p>
-  <strong>Fats:</strong>
-  <%= @entry.fats %>
-</p>
+  </div>
 
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+  <div class="btn_container">
+    <%= link_to 'Editar', edit_entry_path(@entry), class: "btn green" %>
+    <%= link_to 'Volver', entries_path, class: "btn red" %>
+  </div>
+
+</div>

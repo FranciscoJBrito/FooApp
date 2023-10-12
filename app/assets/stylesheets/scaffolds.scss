@@ -4,6 +4,7 @@ body {
   background-color: var(--background);
   color: #333;
   font-family: 'Wix Madefor Text', sans-serif;
+  min-height: 100vh;
 }
 body, p, ol, ul, td {
   font-size: 16px;
@@ -11,7 +12,7 @@ body, p, ol, ul, td {
 }
 
 .application_container {
-  padding: 30px;
+  padding: var(--general-padding);
 }
 
 pre {
@@ -71,7 +72,7 @@ h3 {
 }
 // End Headers
 
-  // Containers styling
+// Containers styling
 .main_container {
   display: flex;
   flex-direction: column;
@@ -118,10 +119,14 @@ h3 {
 // End form styling
 // Buttons
 .btn_container {
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  bottom: var(--general-padding);
+  left: var(--general-padding);
+  right: var(--general-padding);
 }
 
 .btn { 
@@ -158,6 +163,24 @@ h3 {
     background: var(--green-500);
     color: white
   }
+
+  &.gray {
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #e2e2e2;
+    color: gray;
+
+    &:hover {
+      background: var(--green-400);
+      color: white;
+      border-color: var(--green-400);
+    }
+  }
+
+  &.primary {
+    color: white;
+    background-color: var(--green-500);
+  }
 }
 // End buttons
 
@@ -166,3 +189,4 @@ label {
   padding: 8px 0px 3px 0px;
   font-size: 16px;
 }
+

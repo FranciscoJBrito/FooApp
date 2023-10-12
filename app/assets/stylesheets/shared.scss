@@ -2,10 +2,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
+      width: calc(100% - 60px);
+      border-bottom: 1px solid var(--green-300);
       background-color: var(--green-200);
       height: 90px;
-      padding: 0px 30px;
+      padding: 0px var(--general-padding);
 
       h1 {
             margin: 0px;

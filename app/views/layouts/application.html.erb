@@ -10,15 +10,15 @@
   </head>
 
   <body>
-    <%= render "shared/header" %>
 
     <% if  notice.present? %>
-      <div calss="notification is-link is-light"><%= notice %></div>
+      <div class="notification is_success"><%= notice %></div>
     <%end%>
 
     <% if  alert.present? %>
-      <div calss="notification is-danger is-light"><%= alert %></div>
+      <div class="notification is_alert"><%= alert %></div>
     <%end%>
+    <%= render "shared/header" %>
     <div class="application_container">
       <%= yield %>
     </div>

@@ -27,4 +27,27 @@
       --green-200: #a2e0cd;
       --green-100: #e6f7f3;
       --background: #fffdf5;
+      --general-padding: 30px
  }
+
+.notification {
+     position: absolute;
+     top: 10px;
+     right: 40%;
+     left: 40%;
+     width: fit-content;
+     padding: 10px 15px; 
+     border-radius: 8px;
+     text-align: center;
+
+     &.is_success {
+          background-color: var(--green-600);
+          color: white;
+     }
+
+     &.is_alert {
+          border: 1px solid var(--green-500);
+          background-color: var(--green-200);
+          color: var(--green-500);
+     }
+}
