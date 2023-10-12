@@ -1,33 +1,36 @@
-<h1>Entries</h1>
+<h1>Registros</h1>
+  
 
-<table>
-  <thead>
-    <tr>
-      <th>Meal type</th>
-      <th>Calories</th>
-      <th>Proteins</th>
-      <th>Carbohydrates</th>
-      <th>Fats</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="records_container">
     <% @entries.each do |entry| %>
-      <tr>
-        <td><%= entry.meal_type %></td>
-        <td><%= entry.calories %></td>
-        <td><%= entry.proteins %></td>
-        <td><%= entry.carbohydrates %></td>
-        <td><%= entry.fats %></td>
-        <td><%= link_to 'Show', entry %></td>
-        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card_container">
+        <h2><%= entry.meal_type %></h2>
+        <div class="card_item">
+          <p>Calorias: </p>
+          <span><%= entry.calories %> kcal</span>
+        </div>
+        <div class="card_item">
+          <p>Proteinas: </p>
+          <span><%= entry.proteins %> g</span>
+        </div>
+        <div class="card_item">
+          <p>Carbohidratos: </p>
+          <span><%= entry.carbohydrates %> g</span>
+        </div>
+        <div class="card_item">
+          <p>Grasas: </p>
+          <span><%= entry.fats %> g</span>
+        </div>
+
+        <div class="card_actions">
+          <p><%= link_to 'Ver', entry %></p>
+          <p><%= link_to 'Editar', edit_entry_path(entry) %></p>
+          <p><%= link_to 'Eliminar', entry, method: :delete, data: { confirm: 'Estas seguro?' } %></p>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
 <br>
 
-<%= link_to 'Nueva registro', new_entry_path %>
+<%= link_to 'Nuevo registro', new_entry_path %>
